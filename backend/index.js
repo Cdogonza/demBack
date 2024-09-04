@@ -5,7 +5,10 @@ const bodyparser = require('body-parser');
 
 const cors=require("cors");
 
-app.UseCors(options => options.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
+app.use(cors({
+    origin: "*"
+}));
+
 
 
 app.use(bodyparser.json());
