@@ -5,12 +5,8 @@ const bodyparser = require('body-parser');
 
 const cors=require("cors");
 
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET , PUT , POST , DELETE");
-    res.header("Access-Control-Allow-Headers", "Content-Type, x-requested-with");
-    next(); // Important
-})
+app.UseCors(options => options.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
+
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: false}));
