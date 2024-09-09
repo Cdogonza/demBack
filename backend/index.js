@@ -6,7 +6,7 @@ const bodyparser = require('body-parser');
 const cors=require("cors");
 
 app.use((req, res, next) =>{
-    res.append('Access-Control-Allow-Origin', ['https://dem-back-dxaxrom6b-gonzas-projects-6adf3ca6.vercel.app/enviar'];
+    res.append('Access-Control-Allow-Origin', ['https://tarasjefaturadem.web.app'];
     res.append('Access-Control-Allow-Origin', ['*'];
     next()
 })
