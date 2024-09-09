@@ -6,8 +6,10 @@ const bodyparser = require('body-parser');
 const cors=require("cors");
 
 app.use((req, res, next) =>{
-    res.append('Access-Control-Allow-Origin', ['https://tarasjefaturadem.web.app'];
-    res.append('Access-Control-Allow-Origin', ['*'];
+   res.header("Access-Control-Allow-Headers","*");
+res.header('Access-Control-Allow-Credentials', true);
+res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    
     next()
 })
 
