@@ -5,10 +5,10 @@ const bodyparser = require('body-parser');
 
 const cors=require("cors");
 
-app.use(cors({
-    origin: 'http://localhost:4200'
-}));
-
+app.use((req, res, next) =>{
+    res.append('Acces-Control-Allow-origin', ['*'];
+    next()
+})
 
 
 app.use(bodyparser.json());
