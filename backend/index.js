@@ -1,15 +1,15 @@
 const express  = require('express');
 const app = express();
-let cors = require('cors');
 const bodyparser = require('body-parser');
 
 const cors=require("cors");
 
 app.use((req, res, next) =>{
    res.header("Access-Control-Allow-Headers","*");
-res.header('Access-Control-Allow-Credentials', true);
-res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    
+    res.header('Access-Control-Allow-Credentials', true);
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Origin', '*');
+           
     next()
 })
 
