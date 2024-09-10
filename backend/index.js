@@ -12,7 +12,11 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   next();
 });
-app.use(require('./routes/correo.Routes'));
+
+let envio = require('./controllers/correoController');
+
+app.post('/', envio.envioCorreo);
+module.exports = app;
 
 
 // app.get("/", (req, res) => {
