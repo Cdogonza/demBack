@@ -2,17 +2,17 @@ const express  = require('express');
 const app = express();
 // const bodyparser = require('body-parser');
 
-// const cors=require("cors");
-// app.use(cors({origin:"*"
-// ,credentials:true,
-// methods:"GET,PUT,POST,DELETE",
-// allowedHeaders:"Content-Type,Authorization",
-// preflightContinue:false,
-// optionsSuccessStatus:204,
-// maxAge:86400,
-// exposedHeaders:["Content-Type","Authorization"],
+const cors=require("cors");
+app.use(cors({origin:"*"
+,credentials:true,
+methods:"GET,PUT,POST,DELETE",
+allowedHeaders:"Content-Type,Authorization",
+preflightContinue:false,
+optionsSuccessStatus:204,
+maxAge:86400,
+exposedHeaders:["Content-Type","Authorization"],
 
-// }));
+}));
 
 
 
