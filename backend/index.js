@@ -3,17 +3,23 @@ const app = express();
 // const bodyparser = require('body-parser');
 
 const cors=require("cors");
-app.use(cors({origin:"*"
-,credentials:true,
-methods:"GET,PUT,POST,DELETE",
-allowedHeaders:"Content-Type,Authorization",
-preflightContinue:false,
-optionsSuccessStatus:204,
-maxAge:86400,
-exposedHeaders:["Content-Type","Authorization"],
+// app.use(cors({origin:"*"
+// ,credentials:true,
+// methods:"GET,PUT,POST,DELETE",
+// allowedHeaders:"Content-Type,Authorization",
+// preflightContinue:false,
+// optionsSuccessStatus:204,
+// maxAge:86400,
+// exposedHeaders:["Content-Type","Authorization"],
 
-}));
+// }));
 
+app.UseCors(x => x
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
+app.UseHttpsRedirection(); 
 
 
 // app.use(bodyparser.json());
