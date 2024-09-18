@@ -15,23 +15,23 @@ app.use((req, res, next) => {
 
 let envio = require('./controllers/correoController');
 
-app.post('/', envio.envioCorreo);
-module.exports = app;
+// app.post('/', envio.envioCorreo);
+// module.exports = app;
 
 
-// app.get("/", (req, res) => {
-//   const htmlResponse = `
-//     <html>
-//       <head>
-//         <title>NodeJs y Express en Vercel</title>
-//       </head>
-//       <body>
-//         <h1>Soy un proyecto Back end en vercel</h1>
-//       </body>
-//     </html>
-//   `;
-//   res.send(htmlResponse);
-// });
+app.get("/", (req, res) => {
+  const htmlResponse = `
+    <html>
+      <head>
+        <title>NodeJs y Express en Vercel</title>
+      </head>
+      <body>
+        <h1>Soy un proyecto Back end en vercel</h1>
+      </body>
+    </html>
+  `;
+  res.send(htmlResponse);
+});
 
 app.listen(port, () => {
   console.log(`port runing in http://localhost:${port}`);
